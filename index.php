@@ -22,7 +22,7 @@ $link = mysqli_connect('localhost','root','','WD04-filmoteka-andreev');
 if (mysqli_connect_error()){
 	die("ошибка подключения к базе данных");
 } 
-
+ 
 /*echo "<pre>";
 print_r($_GET);
 echo "</pre>";*/
@@ -38,10 +38,7 @@ if ( mysqli_affected_rows($link) > 0) {
 } else {
 	 $resulError = "<p>Что-то пошло не так</p>";
 }
-
-
 }
-
 
 $query = "SELECT * From movies"; 
 $movies = array();
@@ -77,7 +74,6 @@ if ($result = mysqli_query($link,$query)){
 ?>
 <body class="index-page">
 	<div class="container user-content section-page">
-
 <?php if ( $resultSuccess != '') {?>
 					<div class="info-success"><?=$resultSuccess?></div>
 <?php  } ?>
@@ -90,13 +86,10 @@ if ($result = mysqli_query($link,$query)){
 					<div class="error"><?=$resultError?></div>
 <?php  } ?>
 
-
-
 		<div class="title-1">Фильмотека</div>
-
 <?php 
   foreach ($movies as $key => $value) {
-  ?> 
+  	?> 
 		<div class="card mb-20">
   <div class="card__header"> 
 			<h4 class="title-4"><?php echo $movies[$key]['name'] ?></h4>
@@ -105,7 +98,9 @@ if ($result = mysqli_query($link,$query)){
    <a  href="index.php?action=delete&id=<?=$value['id']?>" class="button button--delete">Удалить</a> 
    </div>
 		</div>
-
+?>
+		<div class="card mb-20">
+			<h4 class="title-4"><?php echo $movies[$key]['name'] ?></h4>
 			<div class="badge"><?php echo $movies[$key]['kind'] ?></div>
 			<div class="badge"><?php echo $movies[$key]['year'] ?></div>
 		</div>
