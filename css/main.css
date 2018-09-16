@@ -274,19 +274,82 @@ a.badge:active {
 .button--icon-left svg {
   margin-right: 5px;
 }
-.button--edit {
-  border-color: #FFBA00;
+
+
+.button--delete {
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  display: inline-block;
+  line-height: 1;
+  outline: none;
+  border-width: 2px;
+  border-color: #dde8ee;
+  border-style: solid;
+  border-radius: 22px;
+  height: 2.75em;
+  padding-top: 0.68em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  color: #037EC6;
+  background: #FFF;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 20px;
+  font-size: 14px;
+  height: 32px;
   color: #FFF;
-  background-color: #FFBA00;
+  border-color: #b51919;
+  background-color: #b51919;
+}
+a.button--delete,
+a.button--delete:hover,
+a.button--delete:focus,
+.user-content a.button--delete,
+.user-content a.button--delete:hover,
+.user-content a.button--delete:focus {
+  color: #FFF;
+  text-decoration:none;
+}
+.button--edit {
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  display: inline-block;
+  line-height: 1;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 22px;
+  background: #FFF;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFF;
+  border-color: #ffba00;
+  background-color: #ffba00;
+  font-weight: 700;
+  padding: 6px 20px;  
+  font-size: 14px;
+  height: 32px;
 }
 .button--edit:hover,
 .button--edit:focus {
-  border-color: #FFCF3E;
-  background-color: #FFCF3E;
+  border-color: #DDE8EE;
+  background-color: #DDE8EE;
 }
 .button--edit:active {
-  border-color: #F29A00;
-  background-color: #F29A00;
+  border-color: #b4dff6;
+  background-color: #b4dff6;
+}
+.button--edit:hover,
+.button--edit:focus {
+  border-color: #ffcf3e;
+  background-color: #ffcf3e;
+}
+.button--edit:active {
+  border-color: #f29a00;
+  background-color: #f29a00;
 }
 .button--remove {
   border-color: #b51919;
@@ -433,6 +496,16 @@ a.badge:active {
 .card > .title-6 {
   margin-top: 0;
 }
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.card__header>* {
+  margin-top: 0 !important;
+}
+
 .card__img {
   width: 100%;
   margin-bottom: 15px;
@@ -1124,6 +1197,28 @@ fieldset {
 .form__input-radio {
   display: none;
 }
+.info-success{
+    width:100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.3;
+    background-color: #5EB64D;
+    border-radius: 5px;
+    color: #FFF;
+    padding: 5px 15px;
+}
+.info-notification{
+    width:100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.3;
+    background-color: #E3AB00;
+    border-radius: 5px;
+    color: #FFF;
+    padding: 5px 15px;
+}
+
+
 .notify {
   font-family: 'Open sans';
   font-size: 16px;
