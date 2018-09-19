@@ -7,8 +7,8 @@ $link = db_connect();
 
 require('models/films.php');
 
-//UPDATE film data in DB
-if (array_key_exists('update-film', $_POST)) {
+if (array_key_exists('add-film', $_POST)) {
+
 	// Обработка ошибок
 	if ( $_POST['name'] == '' ) {
 		$errors[] = "Необходимо ввести название фильма!";
@@ -22,22 +22,20 @@ if (array_key_exists('update-film', $_POST)) {
 
 	// Запись данных в БД если нет  ошибок
 	if ( empty($errors)) {
+		
+		$result = film_new($link, $_POST['name'], $_POST['kind'], $_POST['year'], $_POST['description']);
 
-		$result = film_update($link, $_POST['name'], $_POST['kind'], $_POST['year'], $_GET['id'], $_POST['description']);
 		if ( $result ) {
-			$resultSuccess = "Фильм успешно обновлен!";
+			$resultSuccess = "Фильм был успешно добавлен!";
 		} else {
 			$resultError = "Что-то пошло не так!";
 		}
-
-	}
+	}		
 }
-
-$film = get_film($link, $_GET['id']);
 
 include('views/head.tpl');
 include('views/notification.tpl');
-include('views/edit-film.tpl');
+include('views/new-film.tpl');
 include('views/footer.tpl');
 
 ?>
