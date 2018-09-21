@@ -3,8 +3,8 @@
 			<div class="card mb-20">
 
 				<div class="row">
-					<div class="col">
-						<img src="<?=HOST?>data/films/14349.jpg" alt="<?=$film['name']?>">
+					<div class="col">			     				 
+						<img src="<?=HOST?>data/films/min/<?=$film['photo']?>" alt="<?=$film['name']?>">
 					</div>
 					<!-- /.col -->
 					<div class="col">
@@ -12,7 +12,7 @@
 							<h4 class="title-4"><?=$film['name']?></h4>
 							<div class="buttons">
 
-								<?php 
+								<?php  
 
    if (isset($_SESSION['user']) ){
 
