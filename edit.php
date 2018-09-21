@@ -6,6 +6,7 @@ require('database.php');
 $link = db_connect();
 
 require('models/films.php');
+include_once('functions/login-functions.php');  
 
 //UPDATE film data in DB
 if (array_key_exists('update-film', $_POST)) {
