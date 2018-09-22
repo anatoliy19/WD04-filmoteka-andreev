@@ -12,13 +12,13 @@
  			}
  		?>
 
- 		<div class="form-group"><label class="label">Название фильма<input class="input" name="name" type="text" placeholder="Такси 2" /></label></div>
+ 		<div class="form-group"><label class="label">Название фильма<input class="input" name="name" type="text" placeholder="Введите название" /></label></div>
  		<div class="row">
  			<div class="col">
- 				<div class="form-group"><label class="label">Жанр<input class="input" name="kind" type="text" placeholder="комедия" /></label></div>
+ 				<div class="form-group"><label class="label">Жанр<input class="input" name="kind" type="text" placeholder="Введите жанр" /></label></div>
  			</div>
  			<div class="col">
- 				<div class="form-group"><label class="label">Год<input class="input" name="year" type="text" placeholder="2000" /></label></div>
+ 				<div class="form-group"><label class="label">Год<input class="input" name="year" type="text" placeholder="Введите год" /></label></div>
  			</div>		
  		</div>
  		<textarea class="textarea mb-20" name="description" placeholder="Введите описание фильма"></textarea>
